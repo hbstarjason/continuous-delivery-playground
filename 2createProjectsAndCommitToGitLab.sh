@@ -17,7 +17,7 @@ createProjectAndCommitToGitLab(){
 	rm -fr $targetPath
 
 	echo "--- Cloning..."
-	git clone http://$GITLAB_USER:$GITLAB_PW@localhost:10080/root/$projectName.git $targetPath
+	git clone http://$GITLAB_USER:$GITLAB_PW@207.46.141.125:10080/root/$projectName.git $targetPath
 	git config user.name $GITLAB_USER #don't use --global!
 	git config credential.helper cache #caches password for 15 min
 	
