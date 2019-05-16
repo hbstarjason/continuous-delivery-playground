@@ -24,7 +24,8 @@ docker run -d --name $JENKINS_CONTAINER_NAME \
 	-v $(which docker):/bin/docker \
 	-v /usr/lib/x86_64-linux-gnu/libapparmor.so.1.1.0:/lib/x86_64-linux-gnu/libapparmor.so.1 \
 	-u root \
-	jenkins:1.609.3
+	jenkins/jenkins:lts
+	#jenkins:1.609.3
 
 #the last 3 volume bindings are important in order to enable jenkins to run docker, see 
 #http://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/
